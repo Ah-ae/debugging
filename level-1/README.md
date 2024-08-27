@@ -55,22 +55,22 @@ npm install
 
 ```jsx
 // app.js
-const express = require("express");
-const multer = require("multer");
+const express = require('express');
+const multer = require('multer');
 const app = express();
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: 'uploads/' });
 
-app.post("/upload", upload.single("file"), (req, res) => {
+app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
-    return res.status(400).send("No file uploaded.");
+    return res.status(400).send('No file uploaded.');
   }
 
-  res.send("File uploaded successfully.");
+  res.send('File uploaded successfully.');
 });
 
 app.listen(3000, () => {
-  console.log("Server started on port 3000");
+  console.log('Server started on port 3000');
 });
 ```
 
@@ -144,7 +144,7 @@ Step 4에서 도출한 옵션 중 하나를 선택하여 검증 가능한 가설
 - `.includes()` 메서드를 사용하면 배열에 특정 값이 포함되어 있는지 확인할 수 있습니다.
 
 ```jsx
-const path = require("path");
+const path = require('path');
 
 const fileExtension = path.extname(file.originalname);
 ```
